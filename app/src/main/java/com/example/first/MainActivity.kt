@@ -28,13 +28,13 @@ class MainActivity : ComponentActivity() {
         setContent {
             FirstTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-
+                    glbool(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
     }
 }
-
+---
 
 @Preview(showBackground = true)
 @Composable
