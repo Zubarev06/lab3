@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -44,11 +45,23 @@ fun glbool(modifier: Modifier = Modifier){
     Column(modifier = modifier.padding(16.dp).fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally) {
 
-            TextField(
-                value = chInput.value,
-                onValueChange = {chInput. value = it},
-                label = {Text("Введите символ")}
-            )
+        TextField(
+            value = chInput.value,
+            onValueChange = {chInput. value = it},
+            label = {Text("Введите символ")}
+        )
+
+        Button(onClick = {
+            val ch = chInput.value.toCharArray()
+            if (ch == null) {
+                res.value = "Введите символ"
+            } else {
+                res.value = Gl(ch[0])
+            }
+        }) {
+            Text("Проверить")
+        }
+        Text(text = res.value)
     }
 }
 
