@@ -1,5 +1,6 @@
 package com.example.first
 
+import android.R
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -29,3 +30,14 @@ class MainActivity : ComponentActivity() {
 
 
 @Preview(showBackground = true)
+
+
+
+fun Gl(ch: Char): String {
+    return when {
+        ch in listOf('a', 'e', 'u', 'i', 'o') -> "Это гласная буква"
+        ch in listOf('y', 't', 'r', 'w', 'q', 'p', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z',
+            'x', 'c', 'v', 'b', 'n', 'm') -> "Это согласная буква"
+        else -> "Это не буква"
+    }
+}
