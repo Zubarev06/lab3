@@ -13,8 +13,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.first.ui.theme.FirstTheme
 
 class MainActivity : ComponentActivity() {
@@ -38,6 +40,10 @@ fun glbool(modifier: Modifier = Modifier){
     val chInput = remember { mutableStateOf("") }
     val res = remember { mutableStateOf("") }
 
+    Column(modifier = modifier.padding(16.dp).fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally) {
+
+    }
 }
 
 
