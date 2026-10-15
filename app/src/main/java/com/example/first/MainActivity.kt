@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -43,6 +44,11 @@ fun glbool(modifier: Modifier = Modifier){
     Column(modifier = modifier.padding(16.dp).fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally) {
 
+            TextField(
+                value = chInput.value,
+                onValueChange = {chInput. value = it},
+                label = {Text("Введите символ")}
+            )
     }
 }
 
